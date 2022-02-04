@@ -1,4 +1,5 @@
-{% if first_time_accessed %}<script>                               
+{% if first_time_accessed %}
+	<script>                               
 	window.dataLayer = window.dataLayer || [];                                            
 	var shipping_price = '{{shipping_price | money_without_currency }}';
 	shipping_price  = shipping_price.replace(",", ".");
@@ -15,5 +16,6 @@
 	'tax': tax_price,
 	'payment_type': '{{order.transactions[0].gateway}}',
 	'transaction_id': "{{order.name}}",
-	});</script> 
-	{% endif %}
+	});
+ 	</script> 
+ {% endif %}
