@@ -1,5 +1,4 @@
 	<script>                               
-    
 window.analyzifyProductPageHandlePublic = function(){
         var productName = "{{ product.title | remove: "'" | remove: '"' }}";
         var productId = "{{ product.id }}";
@@ -17,4 +16,10 @@ window.analyzifyProductPageHandlePublic = function(){
           category: productCollection,
           variant_id: "{{ product.selected_variant.id | default: product.variants[0].id }}"
         });
+	      {% case template_name %}
+       
+        {% when 'product' %}
+          analyzifyProductPageHandlePublic()
+
+      {% endcase %}
 	</script>                               
