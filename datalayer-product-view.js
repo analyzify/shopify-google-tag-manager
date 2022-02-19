@@ -1,4 +1,6 @@
-   window.analyzifyProductPageHandlePublic = function(){
+	<script>                               
+    
+window.analyzifyProductPageHandlePublic = function(){
         var productName = "{{ product.title | remove: "'" | remove: '"' }}";
         var productId = "{{ product.id }}";
         var productPrice = "{{ product.variants.first.price | times: 0.01 }}";
@@ -15,3 +17,4 @@
           category: productCollection,
           variant_id: "{{ product.selected_variant.id | default: product.variants[0].id }}"
         });
+	</script>                               
