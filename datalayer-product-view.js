@@ -1,5 +1,6 @@
-	<script>                               
-window.analyzifyProductPageHandlePublic = function(){
+	<script>    
+	window.dataLayer = window.dataLayer || []; 
+	window.analyzifyProductPageHandlePublic = function(){
         var productName = "{{ product.title | remove: "'" | remove: '"' }}";
         var productId = "{{ product.id }}";
         var productPrice = "{{ product.variants.first.price | times: 0.01 }}";
