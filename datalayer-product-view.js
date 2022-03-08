@@ -12,7 +12,7 @@
       var productCollection = "{{ product.collections.first.title | remove: "'" | remove: '"' }}"
 
       window.dataLayer.push({
-        event: 'ee_productDetail',
+        event: 'analyzify_productDetail',
         name: productName,
         id: productId,
         price: productPrice,
